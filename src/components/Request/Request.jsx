@@ -2,10 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Request.css';
 
-const RadioButtonGroup = ({ children }) => {
+const RadioButtonGroup = ({ name, onChange, children }) => {
+  const radioButtonsWithNameAndOnChange = React.Children.map(children, child => {
+    return React.cloneElement(child, {
+      name,
+      onChange
+    });
+    
+  });
   return (
     <>
-      { children }
+      { radioButtonsWithNameAndOnChange }
     </>
   );
 };
