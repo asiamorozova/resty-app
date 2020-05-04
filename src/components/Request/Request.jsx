@@ -48,7 +48,7 @@ const Request = ({ url, onUrlChange, body, onBodyChange, onMethodChange, onSubmi
 Request.propTypes = {
   url: PropTypes.string.isRequired,
   method: PropTypes.string.isRequired,
-  body: PropTypes.object.isRequired,
+  body: PropTypes.string.isRequired,
   onUrlChange: PropTypes.func.isRequired,
   onMethodChange: PropTypes.func.isRequired, 
   onBodyChange: PropTypes.func.isRequired,
