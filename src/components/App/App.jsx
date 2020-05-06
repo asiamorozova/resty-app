@@ -1,8 +1,9 @@
 import React from 'react';
-import Request from '../Request/Request';
-
+import Resty from '../../containers/Resty/Resty.jsx';
 
 export default function App() {
-  return <Request/>;
+  return (
+    <Resty />
+  );
 }
-  
+
