@@ -1,29 +1,34 @@
 import React, { Component, useState } from 'react';
 import Request from '../../components/Request/Request';
-import 
+import Display from '../../components/Display/Display';
+import { fetchRequest } from  '../../fetchRequest';
 
-export default class Resty extends Component {
-    state = {
-      url: '',
-      method: 'POST',
-      body: null
-    }
+const Resty = () => {
+  const [url, setUrl] = useState('');
+  const [method, setMethod] = useState('GET');
+  const [jsonBody, setJSONBody] = useState('');
+  const [response, setResponse] = useState({});
 
-    handleUrlChange = () => {}
-    handleMethodChange = () => {}
-    handleBodyChange = () => {}
+  const handleUrlChange = ({ target }) => setUrl(target.value);
+  const handInputChange = ({ target }) => setMethod(target.value);
+  const handleJSONBodyChange = ({ target }) => setJSONBody(target.value);
 
-    handleSubmit = () => {
-        .then(response => )
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetchRequest(url, method, jsonBody)
+      .then(res => setResponse(JSON.stringify(res)));
+  };
 
-    render() {
-      const { url, method, body } = this.state;
-      return (
-        <>
-          <Request url={url} method={method} body={body} onSubmit={this.handleSubmit}/>
-        </>
-      );
+  return (
+    <>
+      <Display onSubmit={handleSubmit}
+        url={url}
+        onURLChange={handleUrlChange}
+        method={method}
+        onInputChange={handleInputChange}
+        jsonBody={jsonBody}
+        onJsonBodyChange={handleJSONBodyChange}/>
+    </>
+  );
+};
 
-    }
-}
