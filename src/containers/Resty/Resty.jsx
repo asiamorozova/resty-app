@@ -10,7 +10,7 @@ const Resty = () => {
   const [response, setResponse] = useState({});
 
   const handleUrlChange = ({ target }) => setUrl(target.value);
-  const handInputChange = ({ target }) => setMethod(target.value);
+  const handleInputChange = ({ target }) => setMethod(target.value);
   const handleJSONBodyChange = ({ target }) => setJSONBody(target.value);
 
   const handleSubmit = (event) => {
@@ -21,6 +21,7 @@ const Resty = () => {
 
   return (
     <>
+      <Request/>
       <Display onSubmit={handleSubmit}
         url={url}
         onURLChange={handleUrlChange}
@@ -31,4 +32,6 @@ const Resty = () => {
     </>
   );
 };
+
+export default Resty;
 
