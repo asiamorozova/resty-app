@@ -18,10 +18,10 @@ const Request = ({ url, textBody, onChange, onSubmit }) => (
       <label><input type="radio" name="method" value="post"vonChange={onChange}/> POST 
       </label>
 
-      <label>v<input type="radio" name="method" value="put" onChange={onChange}/> PUT 
+      <label><input type="radio" name="method" value="put" onChange={onChange}/> PUT 
       </label>
 
-      <label><input type="radio" name="method" value="patch" onChange={onChange}/> PATCH 
+      <label><input type="radio" name="method" value="patch" onChange={onChange}/>PATCH 
       </label>
 
       <label><input type="radio" name="method" value="delete" onChange={onChange}/> DELETE 
