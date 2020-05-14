@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-const Request = ({ url, textBody, onChange, onSubmit }) => (
+const Request = ({ url, method, textBody, onChange, onSubmit }) => (
   <div>
     <form onSubmit={onSubmit}>
       
@@ -39,7 +39,8 @@ const Request = ({ url, textBody, onChange, onSubmit }) => (
 );
 Request.propTypes = {
   url: PropTypes.string.isRequired,
-  testBody: PropTypes.string.isRequired,
+  method: PropTypes.string.isRequired,
+  textBody: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired
 
@@ -53,7 +54,7 @@ export default Request;
 
 
 
-
+//ryans way from lecture
 
 // const RadioButtonGroup = ({ name, onChange, children }) => {
 //   const radioButtonsWithNameAndOnChange = React.Children.map(children, child => {
