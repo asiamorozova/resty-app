@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History component renders History 1`] = `
+<div>
+  <p>
+    https://testurl.com
+  </p>
+  <p>
+    GET
+  </p>
+</div>
+`;
+
+exports[`HistoryItem component renders HistoryItem 1`] = `
+<div>
+  <p>
+    https://testurl.com
+  </p>
+  <p>
+    GET
+  </p>
+</div>
+`;

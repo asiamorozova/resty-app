@@ -7,7 +7,7 @@ const History = ({ url, method }) => (
     <p>{method}</p>
   </div>
 );
-History.PropTypes = {
+History.propTypes = {
   url: PropTypes.string.isRequired,
   method: PropTypes.string.isRequired
 };
